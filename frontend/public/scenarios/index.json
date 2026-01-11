@@ -3,12 +3,32 @@
     {
       "name": "Capital of France",
       "file": "./scenarios/france_capital.json",
-      "description": "Analyzing 'The capital of France is' completion"
+      "description": "GPT-2 predicting 'The capital of France is'"
     },
     {
       "name": "Simple Math",
       "file": "./scenarios/simple_math.json",
-      "description": "Analyzing '2 + 2 =' completion"
+      "description": "GPT-2 completing '2 + 2 ='"
+    },
+    {
+      "name": "Largest Planet",
+      "file": "./scenarios/largest_planet.json",
+      "description": "GPT-2 predicting 'The largest planet in our solar system is'"
+    },
+    {
+      "name": "Code Completion",
+      "file": "./scenarios/code_completion.json",
+      "description": "GPT-2 completing 'def fibonacci(n):'"
+    },
+    {
+      "name": "Number Comparison",
+      "file": "./scenarios/number_comparison.json",
+      "description": "GPT-2 comparing 'Which is greater, 9.11 or 9.9?'"
+    },
+    {
+      "name": "Indirect Object Identification",
+      "file": "./scenarios/simple_ioi.json",
+      "description": "GPT-2 predicting 'When Mary and John went to the store, John gave a drink to'"
     }
   ]
 }

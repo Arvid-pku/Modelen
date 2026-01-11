@@ -7,7 +7,7 @@ Visualize and analyze transformer language model internals: attention patterns, 
 This project supports two usage modes:
 
 1. **Local Development** - Clone/fork the repo and run the full backend + frontend locally for interactive model analysis and interventions
-2. **Static Demo** - Visit the [GitHub Pages demo](https://username.github.io/Modelen/) to explore pre-computed examples (no interventions support)
+2. **Static Demo** - Visit the [GitHub Pages demo](https://arvid-pku.github.io/Modelen/) to explore pre-computed examples (no interventions support)
 
 ## Requirements
 

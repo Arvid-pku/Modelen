@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:static": "tsc && vite build --mode static",
+    "preview": "vite preview",
+    "preview:static": "vite preview --mode static",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "deploy": "npm run build:static && npx gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
