@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM Interpretability Workbench</title>
+    <script>
+      // Immediately set theme class before React loads to prevent flash
+      (function() {
+        var theme = localStorage.getItem('llm-workbench-theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        // Remove any existing theme classes and add the correct one
+        document.documentElement.classList.remove('dark', 'light');
+        document.documentElement.classList.add(theme);
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

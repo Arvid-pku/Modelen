@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles with theme support */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Light mode defaults */
+:root,
+:root.light,
+:root[data-theme="light"] {
+  --bg-primary: #f3f4f6; /* gray-100 */
+  --bg-secondary: #ffffff; /* white */
+  --bg-tertiary: #e5e7eb; /* gray-200 */
+  --text-primary: #111827; /* gray-900 */
+  --text-secondary: #4b5563; /* gray-600 */
+  --border-color: #d1d5db; /* gray-300 */
+}
+
+/* Dark mode */
+:root.dark,
+:root[data-theme="dark"] {
+  --bg-primary: #111827; /* gray-900 */
+  --bg-secondary: #1f2937; /* gray-800 */
+  --bg-tertiary: #374151; /* gray-700 */
+  --text-primary: #f3f4f6; /* gray-100 */
+  --text-secondary: #9ca3af; /* gray-400 */
+  --border-color: #374151; /* gray-700 */
+}
+
+/* Apply background and text color using CSS variables as fallback */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Also use Tailwind classes */
+body {
+  @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+}
+
+/* Custom scrollbar - light mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Visualization tooltip */
+.viz-tooltip {
+  @apply absolute bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm pointer-events-none z-50 shadow-lg;
+}
+
+/* Theme-aware utility classes */
+@layer components {
+  .panel {
+    @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg;
+  }
+
+  .panel-secondary {
+    @apply bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 text-white rounded transition;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 rounded transition;
+  }
+
+  .input-field {
+    @apply bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500;
+  }
+
+  .sidebar {
+    @apply bg-white dark:bg-gray-800 border-r border-gray-300 dark:border-gray-700;
+  }
+
+  .tab-active {
+    @apply border-cyan-500 text-cyan-600 dark:text-cyan-400;
+  }
+
+  .tab-inactive {
+    @apply border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200;
+  }
+}
+
+/* Recharts theme overrides */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  @apply stroke-gray-300 dark:stroke-gray-700;
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  @apply !bg-white dark:!bg-gray-800 !border-gray-300 dark:!border-gray-600;
+}

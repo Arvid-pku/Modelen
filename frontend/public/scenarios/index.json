@@ -1,0 +1,14 @@
+{
+  "scenarios": [
+    {
+      "name": "Capital of France",
+      "file": "./scenarios/france_capital.json",
+      "description": "Analyzing 'The capital of France is' completion"
+    },
+    {
+      "name": "Simple Math",
+      "file": "./scenarios/simple_math.json",
+      "description": "Analyzing '2 + 2 =' completion"
+    }
+  ]
+}
